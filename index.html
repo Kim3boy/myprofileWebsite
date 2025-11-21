@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Journey | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">My Journey</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="childhood.html">Childhood</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="skills.html">Skills & Talents</a></li>
+                    <li><a href="future.html">Future Aspirations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Homepage Content -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to My Personal Journey</h1>
+            <p>From childhood dreams to academic pursuits, explore my growth, experiences, and aspirations through this digital portfolio.</p>
+            <a href="#about" class="btn">Explore My Journey</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Enoch Mosonik, a passionate university student pursuing my dreams in the field of Computer Science. My journey has been shaped by diverse experiences, from my early childhood to my current academic endeavors.</p>
+                    <p>I believe in continuous learning and growth, and I'm excited to share my story with you through this website. Each section represents a different chapter of my life, highlighting the moments and experiences that have made me who I am today.</p>
+                    <p>Feel free to explore each page to learn more about my background, education, skills, and future aspirations.</p>
+                </div>
+                <div class="about-image">
+                    <img src="profilephoto.jpeg" alt="Student studying">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline">
+        <div class="container">
+            <h2 class="section-title">My Journey Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Early Childhood (2000-2006)</h3>
+                        <p>Growing up in a supportive family environment, developing curiosity and foundational values.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Elementary School (2006-2012)</h3>
+                        <p>Discovering interests in science and technology, participating in school competitions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>High School (2012-2018)</h3>
+                        <p>Exploring various academic disciplines, developing leadership skills, and preparing for university.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>University (2018-Present)</h3>
+                        <p>Pursuing Computer Science degree, engaging in research projects, and building professional networks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Preview -->
+    <section id="skills-preview">
+        <div class="container">
+            <h2 class="section-title">My Skills & Talents</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li>Programming (Python, Java, JavaScript)</li>
+                        <li>Web Development (HTML, CSS, React)</li>
+                        <li>Data Analysis & Visualization</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Problem Solving</li>
+                        <li>Team Collaboration</li>
+                        <li>Communication</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Hobbies & Interests</h3>
+                    <ul class="skill-list">
+                        <li>Photography</li>
+                        <li>Creative Writing</li>
+                        <li>Playing Musical Instruments</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="skills.html" class="btn">View All Skills</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Enoch Mosonik. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <p>Email: cat3@example.com</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Fade in animation for sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Journey | Education</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header (same as homepage) -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">My Journey</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="childhood.html">Childhood</a></li>
+                    <li><a href="education.html" class="active">Education</a></li>
+                    <li><a href="skills.html">Skills & Talents</a></li>
+                    <li><a href="future.html">Future Aspirations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Education Content -->
+    <section class="page-content">
+        <div class="container">
+            <h1 class="section-title">My Educational Journey</h1>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>My academic journey has been a continuous process of discovery and growth. From early curiosity in elementary school to specialized studies in university, education has shaped my perspective and career aspirations.</p>
+                    <p>I've been fortunate to learn from inspiring teachers and participate in various extracurricular activities that complemented my formal education.</p>
+                </div>
+                <div class="about-image">
+                    <img src="zetech.jpeg" alt="University campus">
+                </div>
+            </div>
+            
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-year">2018 - Present</div>
+                    <div class="education-details">
+                        <h3>zetech University</h3>
+                        <p><strong>Bachelor of Science in Computer Science</strong></p>
+                        <ul>
+                            <li>Specialized in Artificial Intelligence and Data Science</li>
+                            <li>Researcher in Machine Learning Lab</li>
+                            <li>Member of Computer Science Club</li>
+                            <li>Recipient of Certification in Networking with Cisco</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-year">2015 - 2018</div>
+                    <div class="education-details">
+                        <h3>Laiser Hill Academy</h3>
+                        <p><strong>KCSE Certificate</strong></p>
+                        <ul>
+                            <li>Advanced Placement courses in Computer Science, Calculus, and Physics</li>
+                            <li>Captain of Robotics Team </li>
+                            <li>Editor of School Newspaper</li>
+                            <li>National Contest Member</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-year">2007 - 2014</div>
+                    <div class="education-details">
+                        <h3>Moi Forces Academy</h3>
+                        <p><strong>KCPE Certificate</strong></p>
+                        <ul>
+                            <li>Developed foundational skills in mathematics and science</li>
+                            <li>Participated in Science Olympiad and Math Club</li>
+                            <li>First place in Regional Science Fair (2011)</li>
+                            <li>Learned basic programming through after-school coding club</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as homepage) -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Enoch Mosonik. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <p>Email: cat3@example.com</p>
+        </div>
+    </footer>
+
+    <script>
+     // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Fade in animation for sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

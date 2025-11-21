@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Journey | Future Aspirations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header (same as homepage) -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">My Journey</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="childhood.html">Childhood</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="skills.html">Skills & Talents</a></li>
+                    <li><a href="future.html" class="active">Future Aspirations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Future Content -->
+    <section class="page-content">
+        <div class="container">
+            <h1 class="section-title">My Future Aspirations</h1>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Looking ahead, I'm excited about the possibilities that the future holds. My experiences and education have prepared me to pursue meaningful work that aligns with my values and passions.</p>
+                    <p>I aspire to contribute to technological innovation while making a positive impact on society and the environment.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Future vision">
+                </div>
+            </div>
+            
+            <div class="aspiration-cards">
+                <div class="aspiration-card">
+                    <div class="aspiration-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Graduate Studies</h3>
+                    <p>I plan to pursue a Master's degree in Artificial Intelligence, focusing on ethical AI development and applications in healthcare.</p>
+                </div>
+                
+                <div class="aspiration-card">
+                    <div class="aspiration-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Career Goals</h3>
+                    <p>I aim to work as a Machine Learning Engineer at a company that values innovation and social responsibility, contributing to projects that solve real-world problems.</p>
+                </div>
+                
+                <div class="aspiration-card">
+                    <div class="aspiration-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Global Impact</h3>
+                    <p>I hope to use technology to address environmental challenges and improve access to education in underserved communities worldwide.</p>
+                </div>
+            </div>
+            
+            <section style="margin-top: 4rem;">
+                <h2 class="section-title">Five-Year Plan</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Year 1: Foundation Building</h3>
+                            <p>Complete undergraduate degree with honors. Secure an internship at a leading tech company. Begin graduate school applications.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Year 2: Graduate Studies</h3>
+                            <p>Begin Master's program in AI. Conduct research in ethical AI applications. Publish first academic paper.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Year 3: Professional Development</h3>
+                            <p>Complete graduate degree. Start career as Machine Learning Engineer. Begin contributing to open-source AI projects.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Year 4-5: Specialization & Impact</h3>
+                            <p>Lead AI projects with social impact. Mentor aspiring technologists. Establish professional reputation in AI ethics community.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section style="margin-top: 4rem;">
+                <h2 class="section-title">Personal Development Goals</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Continuous Learning</h3>
+                        <ul class="skill-list">
+                            <li>Complete advanced certifications in AI and machine learning</li>
+                            <li>Learn a new programming language annually</li>
+                            <li>Attend at least two professional conferences each year</li>
+                            <li>Read one technical book per month</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Community Engagement</h3>
+                        <ul class="skill-list">
+                            <li>Volunteer teaching coding to underrepresented youth</li>
+                            <li>Mentor students interested in technology careers</li>
+                            <li>Participate in hackathons for social good</li>
+                            <li>Contribute to environmental conservation efforts</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Work-Life Balance</h3>
+                        <ul class="skill-list">
+                            <li>Maintain regular exercise and mindfulness practice</li>
+                            <li>Develop photography skills through regular practice</li>
+                            <li>Travel to at least three new countries</li>
+                            <li>Learn to play a new musical instrument</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer (same as homepage) -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Enoch Mosonik. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <p>Email: cat3@example.com</p>
+        </div>
+    </footer>
+
+    <script>
+    // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Fade in animation for sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
